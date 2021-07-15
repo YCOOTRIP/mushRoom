@@ -1,0 +1,58 @@
+{
+  "id": "2606213",
+  "name": "supermall",
+  "font_family": "iconfont",
+  "css_prefix_text": "yc-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "560090",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "4868918",
+      "name": "profile",
+      "font_class": "profile",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "5466045",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e71b",
+      "unicode_decimal": 59163
+    },
+    {
+      "icon_id": "11474331",
+      "name": "rising",
+      "font_class": "rising",
+      "unicode": "e703",
+      "unicode_decimal": 59139
+    },
+    {
+      "icon_id": "11487978",
+      "name": "arrow-left",
+      "font_class": "arrow-left",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "11488125",
+      "name": "seleted",
+      "font_class": "seleted",
+      "unicode": "e763",
+      "unicode_decimal": 59235
+    },
+    {
+      "icon_id": "19989659",
+      "name": "category",
+      "font_class": "category",
+      "unicode": "ea54",
+      "unicode_decimal": 59988
+    }
+  ]
+}
