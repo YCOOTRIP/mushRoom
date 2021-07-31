@@ -3,13 +3,8 @@
     <nav-bar>
       <template #icon1><i class="yc-icon-arrow-left" @click="backClick"></i></template>
       <template #text>
-        <span
-          v-for="(item, index) in titles"
-          :key="index"
-          @click="titleChange(index)"
-          :class="{ active: index === currentIndex }"
-          >{{ item }}</span
-        >
+        <span v-for="(item, index) in titles" :key="index" @click="titleChange(index)"
+          :class="{ active: index === currentIndex }">{{ item }}</span>
       </template>
     </nav-bar>
   </div>
@@ -19,7 +14,7 @@
 import NavBar from '@/components/common/navBar/NavBar'
 export default {
   name: 'DetailNav',
-  data() {
+  data () {
     return {
       titles: ['商品', '参数', '评论', '推荐'],
       currentIndex: 0
@@ -29,11 +24,11 @@ export default {
     NavBar
   },
   methods: {
-    titleChange(index) {
+    titleChange (index) {
       this.currentIndex = index
       this.$emit('titleChange', index)
     },
-    backClick() {
+    backClick () {
       this.$router.back()
     }
   }

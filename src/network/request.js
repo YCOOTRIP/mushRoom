@@ -1,25 +1,23 @@
 import axios from 'axios'
 
-// toquest creat 与 get/post 的区别
-
 export function request(config) {
   const instance = axios.create({
     baseURL: 'http://152.136.185.210:7878/api/m5',
     timeout: 5000
   })
   instance.interceptors.request.use(
-    (config) => {
+    config => {
       return config
     },
-    (err) => {
+    err => {
       console.log(err)
     }
   )
   instance.interceptors.response.use(
-    (config) => {
+    config => {
       return config
     },
-    (err) => {
+    err => {
       console.log(err)
     }
   )
