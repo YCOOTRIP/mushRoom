@@ -39,7 +39,6 @@ export default {
   padding-bottom: 40px;
   position: relative;
   width: 48%;
-  height: 315px;
   img {
     width: 100%;
     height: 100%;
