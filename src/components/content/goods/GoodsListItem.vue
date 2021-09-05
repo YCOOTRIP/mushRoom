@@ -15,18 +15,18 @@ export default {
   props: {
     goodsItem: {
       type: Object,
-      default() {
+      default () {
         return {}
       }
     }
   },
   computed: {
-    showImage() {
+    showImage () {
       return this.goodsItem.img || this.goodsItem.image || this.goodsItem.show.img
     }
   },
   methods: {
-    itemClick() {
+    itemClick () {
       this.$router.push(`/detail/${this.goodsItem.iid}`)
     }
   }
@@ -39,8 +39,10 @@ export default {
   padding-bottom: 40px;
   position: relative;
   width: 48%;
+  height: 315px;
   img {
     width: 100%;
+    height: 100%;
     border-radius: 5px;
   }
   .goods-info {
