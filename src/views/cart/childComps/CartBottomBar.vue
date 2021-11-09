@@ -18,11 +18,11 @@ export default {
   name: 'CartBottomBar',
   computed: {
     ...mapGetters(['cartList']),
-    selectAll() {
+    selectAll () {
       if (this.cartList.length === 0) return false
       return this.cartList.every((item) => item.checked)
     },
-    totalPrice() {
+    totalPrice () {
       return (
         '￥' +
         this.cartList
@@ -33,7 +33,7 @@ export default {
           .toFixed(2)
       )
     },
-    all() {
+    all () {
       return this.cartList.filter((item) => item.checked).length
     }
   },
@@ -41,12 +41,12 @@ export default {
     CheckButton
   },
   methods: {
-    buttonClick() {
+    buttonClick () {
       this.selectAll
         ? this.cartList.forEach((item) => (item.checked = false))
         : this.cartList.forEach((item) => (item.checked = true))
     },
-    buyClick() {
+    buyClick () {
       if (this.all === 0) {
         this.$toast.show('请选择要购买的商品')
       }

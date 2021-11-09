@@ -45,7 +45,7 @@ export default {
     GoodsList,
     DetailBottomBar
   },
-  data() {
+  data () {
     return {
       iid: '',
       topImage: [],
@@ -60,7 +60,7 @@ export default {
       currentIndex: 0
     }
   },
-  created() {
+  created () {
     // 保存传入的iid
     this.iid = this.$route.params.iid
     // 获取详情数据
@@ -68,11 +68,11 @@ export default {
     // 获取推荐数据
     this.getRecommend()
   },
-  mounted() {
+  mounted () {
     this.debouncedGetThemeTopYs = debounce(this.getThemeTopY, 300)
   },
   methods: {
-    async getDetail() {
+    async getDetail () {
       const { data: res } = await getDetail(this.iid)
       const data = res.result
       // console.log(data)
@@ -91,15 +91,15 @@ export default {
         this.commentInfo = data.rate.list[0]
       }
     },
-    async getRecommend() {
+    async getRecommend () {
       const { data: res } = await getRecommend()
       this.recommends = res.data.list
     },
-    detailImageLoad() {
+    detailImageLoad () {
       this.debouncedGetThemeTopYs()
       // console.log('调用是避免不了重复调用的')
     },
-    getThemeTopY() {
+    getThemeTopY () {
       // 图片很多的话还是会多次调用
       this.themeTopYs = []
       this.themeTopYs.push(0)
@@ -110,10 +110,10 @@ export default {
       // console.log('但真正有用的方法只调用了一次')
       // console.log(this.themeTopYs)
     },
-    navChange(index) {
+    navChange (index) {
       this.$refs.scroll.scrollTo(0, -this.themeTopYs[index])
     },
-    contentScroll(position) {
+    contentScroll (position) {
       const y = -position.y
       const length = this.themeTopYs.length
       // i 只能取0,1,2,3
@@ -125,7 +125,7 @@ export default {
       }
       this.isShowBackTop = y > 2000
     },
-    addCart() {
+    addCart () {
       // 1.获取商品要展示的信息
       const product = {}
       product.iid = this.iid
